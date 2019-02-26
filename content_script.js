@@ -1,6 +1,11 @@
 console.log("hello!");
 
 $(document).ready(() => {
+
+	$('.page_actions_wide').after('<div class=\"page_actions_wide clear_fix\">  <div class=\"page_action_left fl_l\" id=\"friend_status\">    <div class=\"profile_action_btn\"><button class=\"flat_button button_wide\">Добавить в корзину</button></div>  </div></div>');
+	// $('.profile_actions_wide').after('<div class=\"page_actions_wide clear_fix\">  <div class=\"page_action_left fl_l\" id=\"friend_status\">    <div class=\"profile_action_btn\"><button class=\"flat_button button_wide\">Добавить в корзину</button></div>  </div></div>');
+
+
 	chrome.storage.local.get(function(result){console.log(result)});
 	$(document).keydown((e) => {
 		if (e.ctrlKey && String.fromCharCode(e.which).toLowerCase() === 'e') {
