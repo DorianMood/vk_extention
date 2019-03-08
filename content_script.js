@@ -7,13 +7,15 @@ $(document).ready(() => {
 
 
 	chrome.storage.local.get(function(result){console.log(result)});
+
 	$(document).keydown((e) => {
 		if (e.ctrlKey && String.fromCharCode(e.which).toLowerCase() === 'e') {
 			e.preventDefault();
 			console.log("Good");
+
 			let person = {
-				name: $("._im_page_peer_name")[0].href,
-				link: $("._im_page_peer_name")[0].innerText
+				link: $("._im_page_peer_name")[0].href,
+				name: $("._im_page_peer_name")[0].innerText
 			};
 			chrome.extension.sendMessage({type: "add_true", person: person}, (response) => {
 				console.log(`Response on method add_true : ${response}`);
