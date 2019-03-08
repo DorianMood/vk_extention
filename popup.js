@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		chrome.storage.local.get(['users'], function(result) {
 
 
-			console.log(request.person);
+			// console.log(request.person);
 			let xhr = new XMLHttpRequest();
 			// xhr.onreadystatechange = handleStateChange; // Implemented elsewhere.
 			xhr.open("POST", 'http://localhost/add', true);
