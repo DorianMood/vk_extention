@@ -14,7 +14,7 @@ $(document).ready(() => {
 	Добавление кнопки добавить в корзину.
 	Работа с событиями для коррректной работы этой кнопки.
 	*/
-	if ($('.add-to-cart').length === 0) {
+	if ($('.add-to-cart').length === 0 && $('#page_block_group_main_info').length === 0) {
 		$('.page_actions_wide').after('<div class=\"page_actions_wide clear_fix\">  <div class=\"page_action_left fl_l\" id=\"friend_status\">    <div class=\"profile_action_btn\"><button class=\"flat_button button_wide add-to-cart\">Добавить в корзину</button></div>  </div></div>');
 			// $('.profile_actions_wide').after('<div class=\"page_actions_wide clear_fix\">  <div class=\"page_action_left fl_l\" id=\"friend_status\">    <div class=\"profile_action_btn\"><button class=\"flat_button button_wide\">Добавить в корзину</button></div>  </div></div>');
 		ENABLE_ADDING = true;
@@ -37,7 +37,7 @@ $(document).ready(() => {
 	});
 
 	$('#utils').on('DOMSubtreeModified', () => {
-		if ($('.add-to-cart').length === 0) {
+		if ($('.add-to-cart').length === 0 && $('#page_block_group_main_info').length === 0) {
 			$('.page_actions_wide').after('<div class=\"page_actions_wide clear_fix\">  <div class=\"page_action_left fl_l\" id=\"friend_status\">    <div class=\"profile_action_btn\"><button class=\"flat_button button_wide add-to-cart\">Добавить в корзину</button></div>  </div></div>');
 			// $('.profile_actions_wide').after('<div class=\"page_actions_wide clear_fix\">  <div class=\"page_action_left fl_l\" id=\"friend_status\">    <div class=\"profile_action_btn\"><button class=\"flat_button button_wide\">Добавить в корзину</button></div>  </div></div>');
 			ENABLE_ADDING = true;
