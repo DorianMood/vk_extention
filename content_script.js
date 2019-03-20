@@ -6,7 +6,7 @@ $(document).ready(() => {
 	/*
 	Обработка списка друзей
 	*/
-	console.log($('.friends_list_bl').children().css('background-color', 'red'));
+	// console.log($('.friends_list_bl').children().css('background-color', 'red'));
 
 
 
